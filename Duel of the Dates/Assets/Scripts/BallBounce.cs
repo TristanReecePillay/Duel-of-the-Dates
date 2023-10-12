@@ -40,14 +40,14 @@ public class BallBounce : MonoBehaviour
 
         else if(collision.gameObject.name == "Right Border")
         {
-            //scoreManager.Player1Goal();
+            scoreManager.Player1Goal();
             ballMovement.player1Start = false;
             StartCoroutine(ballMovement.Launch());
         }
 
         else if (collision.gameObject.name == "Left Border")
         {
-            //scoreManager.Player2Goal();
+            scoreManager.Player2Goal();
             ballMovement.player1Start = true;
             StartCoroutine(ballMovement.Launch());
 
