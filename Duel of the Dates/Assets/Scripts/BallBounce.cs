@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 
 public class BallBounce : MonoBehaviour
@@ -37,14 +38,16 @@ public class BallBounce : MonoBehaviour
             Bounce(collision);
         }
 
-        else if(collision.gameObject.name == "RightBorder")
+        else if(collision.gameObject.name == "Right Border")
         {
             scoreManager.Player1Goal();
+           
         }
 
-        else if (collision.gameObject.name == "LeftBorder")
+        else if (collision.gameObject.name == "Left Border")
         {
-            scoreManager.Player1Goal();
+            scoreManager.Player2Goal();
+           
         }
     }
 
