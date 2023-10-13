@@ -1092,6 +1092,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 013676ecbd6102245b48295b15e66d7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreToReach: 3
   player1ScoreText: {fileID: 1752120134}
   player2ScoreText: {fileID: 173440060}
 --- !u!1 &1752120132
