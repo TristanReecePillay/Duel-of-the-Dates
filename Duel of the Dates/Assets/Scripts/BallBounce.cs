@@ -36,6 +36,7 @@ public class BallBounce : MonoBehaviour
         if (collision.gameObject.name == "Player 1" || collision.gameObject.name == "Player 2")
         {
             Bounce(collision);
+            FindObjectOfType<AudioManager>().Play("BallHit");
         }
 
         else if(collision.gameObject.name == "RightBorder")
@@ -43,6 +44,7 @@ public class BallBounce : MonoBehaviour
             scoreManager.Player1Goal();
             ballMovement.player1Start = false;
             StartCoroutine(ballMovement.Launch());
+            FindObjectOfType<AudioManager>().Play("Goal");
         }
 
         else if (collision.gameObject.name == "LeftBorder")
@@ -50,7 +52,7 @@ public class BallBounce : MonoBehaviour
             scoreManager.Player2Goal();
             ballMovement.player1Start = true;
             StartCoroutine(ballMovement.Launch());
-
+            FindObjectOfType<AudioManager>().Play("Goal");
         }
     }
 
